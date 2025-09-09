@@ -83,6 +83,7 @@ FROM supply_chain
 ```
 3. Data Analysis & Findings:
    A) Inventory & Stock Control:
+   
      Q1. Which products are running low on stock?
      ```sql
       SELECT sku, product_type, stock_levels, availability
@@ -105,7 +106,8 @@ FROM supply_chain
       GROUP BY product_type
       ORDER BY inventory_turnover DESC;
      ```
-   A) Supplier Performance:
+   B) Supplier Performance:
+   
      Q1. What is the average lead time per supplier?
      ```sql
      SELECT supplier_name, ROUND(AVG(lead_times),2) AS avg_lead_time

@@ -82,6 +82,7 @@ COUNT (*) FILTER (WHERE costs IS NULL) AS missing_costs
 FROM supply_chain
 ```
 3. Data Analysis & Findings:
+   
    A) Inventory & Stock Control:
    
      Q1. Which products are running low on stock?
@@ -131,6 +132,7 @@ FROM supply_chain
      ORDER BY avg_defect_rate ASC;
      ```
    C) Sales & Profitability:
+   
      Q1. Profitability by category
      ```sql
      SELECT product_type,
@@ -161,6 +163,7 @@ FROM supply_chain
      ```
      
    D) Warehouse & Logistics:
+   
      Q1. Orders fulfilled by warehouse
      ```sql
      SELECT location, COUNT(sku) AS orders_fulfilled
@@ -190,6 +193,7 @@ FROM supply_chain
      ORDER BY avg_cost DESC;
      ```
    E) Market Insights:
+   
      Q1. Revenue contribution by region/location
      ```sql
      SELECT location, SUM(revenue_generated) AS total_revenue
